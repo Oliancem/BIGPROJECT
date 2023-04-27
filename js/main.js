@@ -10,8 +10,7 @@ const programmingData = [
         "Dans ce projet j'ai créé un jeu du sudoku en C vous pouvez retrouver le jeu sur mon github en cliquant sur le lien ci dessous.",
     img_src: "../images/c_programming.jpg",
     is_socials: true,
-
-
+    closeMobileHtml: '<span id="close-mobile" class="close-mobile">&times;</span>',
   },
   {
     id: 2,
@@ -31,6 +30,7 @@ const programmingData = [
         "Créé un annuaire manuellement à partir de méthodes de scrapping pré-définies. \n",
     img_src: "../images/projet_python.png",
     is_socials: true,
+    closeMobileHtml: '<span id="close-mobile" class="close-mobile">&times;</span>',
 
   },
   {
@@ -69,6 +69,8 @@ const programmingData = [
 
     img_src: "../images/projet_php.png",
     is_socials: false,
+    closeMobileHtml: '<span id="close-mobile" class="close-mobile">&times;</span>',
+
 
   },
 ];
@@ -145,6 +147,7 @@ const networkData = [
         "Dans ce projet, j'ai crée un réseau d'entreprise séparé en plusieurs zones réseaux, sécuriser les communications entre les différentes zones réseaux, exposer des services internes (par exemple un serveur WEB). Configurer des services réseaux tel que : serveur DHCP, DNS.",
     img_src: "../images/projet_reseau.png",
     is_socials: true,
+    closeMobileHtml: '<span id="close-mobile" class="close-mobile">&times;</span>',
   },
 ];
 
@@ -208,6 +211,7 @@ const cybersecurityData = [
         "Face à l'augmentation sans précédent des cyberattaques, la demande en professionnels de la cybersécurité n'a jamais été aussi forte. C'est pourquoi grace a ce projet d'introduction a la cybersécurité, j'ai crée une mindmap qui va nous aider a comprendre la source des menaces et donner des réponses concrètes et permettre une anticipation réactive pour éviter, ou du moins, retarder d’autres attaques.",
     img_src: "../images/projet_cyber.png",
     is_socials: true,
+    closeMobileHtml: '<span id="close-mobile" class="close-mobile">&times;</span>',
   },
 ];
 
