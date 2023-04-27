@@ -5,6 +5,8 @@ Ce site web est mon portfolio. Il vient présenter tout les projets réalisés a
 
 Très vite vous remarquerez que le site a un design complètement unique. Il vient reprendre un design Netflix. Ce site est composé de 4 différentes parties, une page d'accueil sur laquel on peut retrouver deux profils, le profil recruteur et mon profil, Eliott. 
 
+![Profiles](https://user-images.githubusercontent.com/117437190/234956709-4dc842f7-8c60-4dd6-ad1c-c5d6ca3738cf.jpg)
+
 Une fois un profil sélectionné, vous retrouverez différentes parties dans la barre de navigation qui sont les suivantes:
 
 - CV
@@ -12,6 +14,8 @@ Une fois un profil sélectionné, vous retrouverez différentes parties dans la 
 - Laisser un message
 
 Sur la page principale, vous retrouverez les différents projets, au passage de la souris sur chaque projet, une animation se fait et un texte vient passer par dessus l'image du projet. Pour en savoir plus, il est possible de cliquer sur le projet et une modal vient s'ouvrir avec une description détaillée sur le projet, les technologies utilisées et le résultat du projet avec un lien sur mon GitHub si possible.
+
+![Accueil](https://user-images.githubusercontent.com/117437190/234956787-10b8e862-15e6-4da4-b819-9bfa868b372c.jpg)
 
 ## CV
 
