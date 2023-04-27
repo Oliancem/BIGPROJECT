@@ -161,10 +161,6 @@ header {
 .box img {
   border-radius: 2px;
 }
-.close-mobile {
-  display: none;
-  font-size: 10px;
-}
 
 
 /* LINKS */
@@ -590,10 +586,22 @@ footer {
 }
 
   }
-@media (max-width: 600px) {
-  .close-mobile {
-    display: inline;
-    font-size: 50px;
-  }
+.modal-main-content {
+  position: relative;
+  padding-bottom: 20px; /* Espace pour le bouton close-mobile */
 }
 
+.close-mobile {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 768px) {
+  .close-mobile {
+    display: inline;
+    font-size: 30px;
+  }
+}
