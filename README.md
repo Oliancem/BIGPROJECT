@@ -51,4 +51,4 @@ Cette partie représente un moyen de me laisser un message. Ce message peut trè
 
 ## Authors
 
-- [@oliancem](https://www.github.com/oliancem)
+- [@Oliancem](https://www.github.com/oliancem)
