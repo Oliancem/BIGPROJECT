@@ -1,0 +1,599 @@
+/* CSS VARIABLES */
+:root {
+  --primary: #141414;
+  --light: #f3f3f3;
+  --dark: #686868;
+}
+
+html,
+body {
+  /* width: 100vw; */
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary);
+  color: var(--light);
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+.project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+img {
+  max-width: 100%;
+  width: 250px;
+}
+.project-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.project-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.project-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  padding-top: 60px;
+}
+
+.wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+header {
+  padding: 20px 20px 0 20px;
+  position: fixed;
+  top: 0;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas: "nt mn mn sb . . . ";
+  background-color: var(--primary);
+  width: 100%;
+  margin-bottom: 0px;
+  z-index: 99;
+}
+
+.netflixLogo {
+  grid-area: nt;
+  object-fit: cover;
+  width: 100px;
+  max-height: 100%;
+
+  padding-left: 30px;
+  padding-top: 0px;
+}
+
+.netflixLogo img {
+  height: 35px;
+}
+
+#logo {
+  color: #e50914;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav {
+  grid-area: mn;
+  padding: 0 30px 0 20px;
+}
+
+.main-nav a {
+  color: var(--light);
+  text-decoration: none;
+  margin: 5px;
+}
+
+.main-nav a:hover {
+  color: var(--dark);
+}
+
+.sub-nav {
+  grid-area: sb;
+  padding: 0 40px 0 40px;
+}
+
+.sub-nav a {
+  color: var(--light);
+  text-decoration: none;
+  margin: 5px;
+}
+
+.sub-nav a:hover {
+  color: var(--dark);
+}
+
+/* MAIN CONTIANER */
+.main-container {
+  padding: 50px 20px;
+  box-sizing: border-box;
+  max-width: 1275px;
+  margin: 0 auto;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.box a {
+  transition: transform 0.3s;
+}
+
+.box a:hover {
+  transition: transform 0.3s;
+  -ms-transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+}
+
+.box img {
+  border-radius: 2px;
+}
+.close-mobile {
+  display: none;
+  font-size: 10px;
+}
+
+
+/* LINKS */
+.link {
+  padding: 50px 0;
+}
+
+.sub-links ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.sub-links a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.sub-links a:hover {
+  color: var(--dark);
+  text-decoration: underline;
+}
+
+.logos a {
+  padding: 10px;
+  text-decoration: none;
+}
+
+.logo {
+  color: var(--dark);
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  text-align: center;
+  color: var(--dark);
+  margin: 10px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 900px) {
+  header {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "nt nt nt  .  .  . sb . . . "
+      "mn mn mn mn mn mn  mn mn mn mn";
+  }
+
+  .box {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "nt nt nt  .  .  . sb . . . "
+      "mn mn mn mn mn mn  mn mn mn mn";
+  }
+
+  .box {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+  }
+
+  .sub-links ul {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    font-size: 15px;
+  }
+
+  header {
+    margin: 0;
+    padding: 20px 0 0 0;
+    position: static;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "nt"
+      "mn"
+      "sb";
+    text-align: center;
+  }
+
+  .netflixLogo {
+    max-width: 100%;
+    margin: auto;
+    padding-right: 20px;
+  }
+
+  .main-nav {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .box {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+
+  .box a:hover {
+    transition: transform 0.3s;
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1.2);
+  }
+
+  .logos {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+  }
+
+  .sub-links ul {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .project-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-container .overlay {
+    width: 100%;
+  }
+
+  .project-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .project-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .netflixLogo,
+  .main-nav,
+  .sub-nav {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 1024px) {
+  .project-container img {
+    width: 150px;
+    height: 150px;
+  }
+  .project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/* ================== New CSS ================== */
+
+.card-flex {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap:wrap
+}
+.new-project-card {
+  /* flex-basis: 250px; */
+  object-fit: cover;
+  position: relative;
+  width: calc(25% - 20px);
+  overflow: hidden;
+  /* transition: transform 0.5s; */
+  min-height: 57px;
+  padding-bottom: 20%;
+  cursor: pointer;
+}
+.new-project-card img {
+  width: 100% !important;
+  object-fit: cover;
+  /* height: 250px; */
+  /* min-height: 250px; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+/* .new-project-card:hover {
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+} */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: translateY(-100%);
+  transition: transform 0.5s ease;
+  z-index: 1;
+  padding: 20px;
+}
+.new-project-card:hover .card-overlay {
+  transform: translateY(0);
+}
+
+.card-overlay h2,
+.card-overlay h3,
+.card-overlay h4,
+.card-overlay h5,
+.card-overlay p,
+.card-overlay p {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.card-overlay h2 {
+  font-size: 22px;
+}
+.card-overlay h3 {
+  color: green;
+}
+.card-overlay-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  gap: 8px;
+  text-align: center;
+}
+
+.card-overlay button {
+  background-color: white;
+  color: #141414;
+  outline: none;
+  border: none;
+  border-radius: 100px;
+  padding: 7px 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+.card-overlay button:hover {
+  background-color: #cecece;
+}
+.seasons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.seasons span {
+  display: inline-block;
+  background-color: #686868;
+  padding: 5px;
+}
+
+.modal {
+  display: none;
+  font-family: Arial, Helvetica, sans-serif;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width:100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  justify-content: center;
+}
+.model-card-wrapper {
+  position: absolute;
+  background-color: #242424;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 7px;
+  width: calc(100% - 67px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: -28px;
+  right: -35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  line-height: 30px;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.model-card-flex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 1.3rem;
+}
+.modal-right h2,
+.modal-right h3 {
+  padding: 8px 0;
+  margin: 0;
+}
+.modal-right h3{
+  color: green;
+}
+
+.des-cutoff-txt {
+  --max-lines: 2;
+  --line-hight: 1.4;
+  max-height: calc(var(--max-lines) * 1rem * var(--line-hight));
+  line-height: var(--line-hight);
+  overflow: hidden;
+}
+
+
+@media (max-width:1100px){
+  .new-project-card {
+    width: calc(33.33% - 20px);
+}
+
+}
+
+@media (max-width:1024px){
+  .close {
+    top: -45px;
+    right: 0;
+
+}
+}
+@media (max-width: 900px){
+.new-project-card {
+    width: calc(50% - 20px);
+}
+
+.new-project-card {
+  min-height: 100px;
+  padding-bottom: 26%;
+}
+
+}
+
+@media (max-width:767px){
+  .model-card-flex {
+    flex-wrap: wrap;
+}
+
+.model-card-wrapper {
+  padding: 30px 20px;
+}
+}
+
+@media (max-width: 600px){
+  .new-project-card {
+      width: 100%;
+  }
+
+  .new-project-card {
+    min-height: 200px;
+    padding-bottom: 26%;
+  }
+
+  h1 {
+    padding: 20px 0;
+}
+
+  }
+@media (max-width: 600px) {
+  .close-mobile {
+    display: inline;
+    font-size: 50px;
+  }
+}
+

@@ -1,0 +1,91 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+}
+
+.content h1 {
+    margin-bottom: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.image-container img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.image-link {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.image-link:hover img,
+.image-link:hover p {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+/* Media query for iPhone SE */
+@media screen and (max-width: 375px) and (max-height: 667px) {
+    .header {
+        padding: 5px;
+    }
+
+    .content h1 {
+        font-size: 24px;
+    }
+
+    .image-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .image-container img {
+        max-width: 150px;
+        max-height: 150px;
+    }
+}
+@media screen and (max-width: 375px) and (max-height: 762px) {
+    .header {
+        padding: 5px;
+    }
+
+    .content h1 {
+        font-size: 24px;
+    }
+
+    .image-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .image-container img {
+        max-width: 150px;
+        max-height: 150px;
+    }
+}
