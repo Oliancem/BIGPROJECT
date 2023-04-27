@@ -75,6 +75,7 @@
   <div class="model-card-wrapper">
     <span class="close">&times;</span>
     <span id="close-mobile" class="close-mobile">&times;</span>
+    <div class="modal-main-content">
     <div class="model-card-flex">
       <div class="modal-left">
         <img class="modal-content" id="img01" />
